@@ -11,7 +11,8 @@ module csr
   import nox_utils_pkg::*;
 #(
   parameter int SUPPORT_DEBUG = 1,
-  parameter int MTVEC_DEFAULT_VAL = 'h1000 // 4KB
+  parameter int MTVEC_DEFAULT_VAL = 'h1000, // 4KB
+  parameter int unsigned M_HART_ID = `M_HART_ID
 )(
   input                     clk,
   input                     rst,
@@ -178,7 +179,7 @@ module csr
       //RV_CSR_MVENDORID: csr_rd_o = `M_VENDOR_ID;
       //RV_CSR_MARCHID:   csr_rd_o = `M_ARCH_ID;
       //RV_CSR_MIMPLID:   csr_rd_o = `M_IMPL_ID;
-      RV_CSR_MHARTID:   csr_rd_o = `M_HART_ID;
+      RV_CSR_MHARTID:   csr_rd_o = M_HART_ID;
       default:          csr_rd_o = rdata_t'('0);
     endcase
 

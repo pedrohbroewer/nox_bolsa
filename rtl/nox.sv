@@ -16,7 +16,8 @@ module nox
   parameter int TRAP_ON_MIS_LSU_ADDR  = 1,      // Trap in case of misaligned addr on LSU
   parameter int TRAP_ON_LSU_ERROR     = 1,      // Trap in case of LSU error
   parameter int FETCH_IF_ID           = 0,
-  parameter int LSU_IF_ID             = 1
+  parameter int LSU_IF_ID             = 1,
+  parameter int unsigned M_HART_ID = `M_HART_ID
 )(
   input                 clk,
   input                 arst,
@@ -173,7 +174,8 @@ module nox
 
   execute #(
     .SUPPORT_DEBUG         (SUPPORT_DEBUG),
-    .MTVEC_DEFAULT_VAL     (MTVEC_DEFAULT_VAL)
+    .MTVEC_DEFAULT_VAL     (MTVEC_DEFAULT_VAL),
+    .M_HART_ID             (M_HART_ID)
   ) u_execute (
     .clk                   (clk),
     .rst                   (rst),
