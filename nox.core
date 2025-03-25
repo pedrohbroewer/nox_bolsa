@@ -1,0 +1,257 @@
+CAPI=2:
+name: core:nox:v0.0.1
+description: Nox RISC-V core
+
+filesets:
+  rtl_nox:
+    files:
+      - bus_arch_sv_pkg/amba_axi_pkg.sv
+      - bus_arch_sv_pkg/amba_ahb_pkg.sv
+      - rtl/inc/nox_pkg.svh: {is_include_file: true}
+      - rtl/inc/core_bus_pkg.svh: {is_include_file: true}
+      - rtl/inc/riscv_pkg.svh: {is_include_file: true}
+      - rtl/inc/nox_utils_pkg.sv
+      - rtl/fetch.sv
+      - rtl/fifo_nox.sv
+      - rtl/nox.sv
+      - rtl/wb.sv
+      - rtl/reset_sync.sv
+      - rtl/csr.sv
+      - rtl/execute.sv
+      - rtl/cb_to_axi.sv
+      - rtl/cb_to_ahb.sv
+      - rtl/register_file.sv
+      - rtl/lsu.sv
+      - rtl/skid_buffer.sv
+      - rtl/decode.sv
+    file_type: systemVerilogSource
+
+  uart_axi:
+    files:
+      - xlnx/rtl/wbuart32/rtl/txuart.v
+      - xlnx/rtl/wbuart32/rtl/rxuartlite.v
+      - xlnx/rtl/wbuart32/rtl/rxuart.v
+      - xlnx/rtl/wbuart32/rtl/skidbuffer.v
+      - xlnx/rtl/wbuart32/rtl/ufifo.v
+      - xlnx/rtl/wbuart32/rtl/txuartlite.v
+      - xlnx/rtl/wbuart32/rtl/axiluart.v
+      - xlnx/rtl/wbuart32/rtl/wbuart.v
+    file_type: systemVerilogSource
+
+  verilog_axi:
+    files:
+      - xlnx/rtl/verilog-axi/rtl/axi_dma_rd.v
+      - xlnx/rtl/verilog-axi/rtl/axi_dma_wr.v
+      - xlnx/rtl/verilog-axi/rtl/axi_ram_wr_if.v
+      - xlnx/rtl/verilog-axi/rtl/axi_axil_adapter.v
+      - xlnx/rtl/verilog-axi/rtl/axi_adapter_rd.v
+      - xlnx/rtl/verilog-axi/rtl/axi_dma.v
+      - xlnx/rtl/verilog-axi/rtl/axi_register_wr.v
+      - xlnx/rtl/verilog-axi/rtl/priority_encoder.v
+      - xlnx/rtl/verilog-axi/rtl/axi_dp_ram.v
+      - xlnx/rtl/verilog-axi/rtl/axi_adapter_wr.v
+      - xlnx/rtl/verilog-axi/rtl/axi_ram.v
+      - xlnx/rtl/verilog-axi/rtl/axi_register_rd.v
+      - xlnx/rtl/verilog-axi/rtl/axil_register_wr.v
+      - xlnx/rtl/verilog-axi/rtl/axil_interconnect.v
+      - xlnx/rtl/verilog-axi/rtl/axi_crossbar_rd.v
+      - xlnx/rtl/verilog-axi/rtl/axil_adapter_rd.v
+      - xlnx/rtl/verilog-axi/rtl/axi_crossbar_wr.v
+      - xlnx/rtl/verilog-axi/rtl/axil_register_rd.v
+      - xlnx/rtl/verilog-axi/rtl/axi_crossbar.v
+      - xlnx/rtl/verilog-axi/rtl/axi_cdma.v
+      - xlnx/rtl/verilog-axi/rtl/axil_adapter_wr.v
+      - xlnx/rtl/verilog-axi/rtl/axi_cdma_desc_mux.v
+      - xlnx/rtl/verilog-axi/rtl/axil_dp_ram.v
+      - xlnx/rtl/verilog-axi/rtl/axi_fifo.v
+      - xlnx/rtl/verilog-axi/rtl/axil_register.v
+      - xlnx/rtl/verilog-axi/rtl/axi_adapter.v
+      - xlnx/rtl/verilog-axi/rtl/axil_adapter.v
+      - xlnx/rtl/verilog-axi/rtl/axi_fifo_wr.v
+      - xlnx/rtl/verilog-axi/rtl/axi_ram_rd_if.v
+      - xlnx/rtl/verilog-axi/rtl/axi_fifo_rd.v
+      - xlnx/rtl/verilog-axi/rtl/axi_crossbar_addr.v
+      - xlnx/rtl/verilog-axi/rtl/axi_ram_wr_rd_if.v
+      - xlnx/rtl/verilog-axi/rtl/arbiter.v
+      - xlnx/rtl/verilog-axi/rtl/axil_cdc_wr.v
+      - xlnx/rtl/verilog-axi/rtl/axil_ram.v
+      - xlnx/rtl/verilog-axi/rtl/axil_cdc.v
+      - xlnx/rtl/verilog-axi/rtl/axil_cdc_rd.v
+      - xlnx/rtl/verilog-axi/rtl/axi_axil_adapter_rd.v
+      - xlnx/rtl/verilog-axi/rtl/axi_interconnect.v
+      - xlnx/rtl/verilog-axi/rtl/axi_register.v
+      - xlnx/rtl/verilog-axi/rtl/axi_dma_desc_mux.v
+      - xlnx/rtl/verilog-axi/rtl/axi_axil_adapter_wr.v
+    file_type: verilogSource
+
+  coremark_nox:
+    files:
+      - xlnx/rtl/nox_coremark.sv
+      - xlnx/rtl/axi_rom_wrapper.sv
+      - sw/coremark/boot_rom.sv
+      - xlnx/rtl/axi_mem_wrapper_coremark.sv
+    file_type: systemVerilogSource
+
+  synth_nox:
+    files:
+      - xlnx/rtl/clk_mgmt.sv
+      - xlnx/rtl/nox_soc.sv
+      - xlnx/rtl/axi_interconnect_wrapper.sv
+      - xlnx/rtl/axi_crossbar_wrapper.sv
+      - xlnx/rtl/axi_rom_wrapper.sv
+      - xlnx/rtl/axi_uart_wrapper.sv
+      - sw/bootloader/output/boot_rom.sv
+      - xlnx/rtl/axi_mem_wrapper.sv
+      - xlnx/rtl/cdc_2ff_sync.sv
+      - xlnx/rtl/nox_wrapper.sv
+      - xlnx/rtl/rst_ctrl.sv
+      - xlnx/rtl/axi_gpio.sv
+      - xlnx/rtl/axi_spi_master.sv
+      - xlnx/rtl/cdc_async_fifo.sv
+      - xlnx/rtl/axi_mtimer.sv
+    file_type: systemVerilogSource
+
+  tb:
+    files:
+      - tb/axi_mem_wbp.sv
+      - tb/axi_mem.sv
+    file_type: systemVerilogSource
+
+  files_tcl:
+    files:
+      - xlnx/tcl/call_viv_hooks.tcl: { file_type: tclSource }
+      - xlnx/tcl/vivado_hook_synth_design_pre.tcl: { file_type: user, copyto: vivado_hook_synth_design_pre.tcl }
+      - xlnx/tcl/vivado_hook_write_bitstream_pre.tcl: { file_type: user, copyto: vivado_hook_write_bitstream_pre.tcl }
+      - xlnx/tcl/vivado_hook_opt_design_post.tcl: { file_type: user, copyto: vivado_hook_opt_design_post.tcl }
+
+  nexysV_constraints:
+    files:
+      - xlnx/xdc/nexys_video.xdc: {file_type: xdc}
+
+  k7_qmtech_constraints:
+    files:
+      - xlnx/xdc/kintex7_qmtech.xdc: {file_type: xdc}
+
+  kc705_constraints:
+    files:
+      - xlnx/xdc/kc705.xdc: {file_type: xdc}
+
+  arty7_constraints:
+    files:
+      - xlnx/xdc/arty_7.xdc: {file_type: xdc}
+
+parameters:
+  DISPLAY_TEST:
+    datatype: bool
+    default : false
+    paramtype: vlogdefine
+  NEXYS_VIDEO_50MHz:
+    datatype: bool
+    default : true
+    paramtype: vlogdefine
+  QMTECH_KINTEX_7_100MHz:
+    datatype: bool
+    default : true
+    paramtype: vlogdefine
+  ARTY_A7_50MHz:
+    datatype: bool
+    default : true
+    paramtype: vlogdefine
+  KC705_KINTEX_7_100MHz:
+    datatype: bool
+    default : true
+    paramtype: vlogdefine
+
+targets:
+  default: &default
+    filesets: [rtl_nox,verilog_axi,uart_axi]
+    toplevel: nox_soc
+
+  lint:
+    default_tool: verilator
+    filesets: [rtl_nox]
+    tools:
+      verilator:
+        mode: lint-only
+        verilator_options: ["--Wno-UNOPTFLAT"]
+    toplevel: nox_soc
+
+  nv_synth:
+    <<: *default
+    default_tool : vivado
+    parameters:
+      - NEXYS_VIDEO_50MHz
+      - DISPLAY_TEST
+    description : Nexys Video board synthesis
+    filesets_append:
+      - synth_nox
+      - nexysV_constraints
+      - files_tcl
+    tools:
+      vivado:
+        part : xc7a200tsbg484-1
+    toplevel: nox_soc
+
+  x7_synth:
+    <<: *default
+    default_tool : vivado
+    parameters:
+      - QMTECH_KINTEX_7_100MHz
+      - DISPLAY_TEST
+    description : Kintex 7 board synthesis
+    filesets_append:
+      - synth_nox
+      - k7_qmtech_constraints
+      - files_tcl
+    tools:
+      vivado:
+        part : xc7k325tffg676-1
+    toplevel: nox_soc
+
+  a7_synth:
+    <<: *default
+    default_tool : vivado
+    parameters:
+      - ARTY_A7_50MHz
+      - DISPLAY_TEST
+    description : Arty A7 - 35 board synthesis
+    filesets_append:
+      - synth_nox
+      - arty7_constraints
+      - files_tcl
+    tools:
+      vivado:
+        part : xc7a35ticsg324-1L
+    toplevel: nox_soc
+
+  coremark_synth:
+    <<: *default
+    default_tool : vivado
+    parameters:
+      - ARTY_A7_50MHz
+      - DISPLAY_TEST
+    description : Arty A7 - 35 board synthesis
+    filesets_append:
+      - coremark_nox
+      - arty7_constraints
+      - files_tcl
+    tools:
+      vivado:
+        part : xc7a35ticsg324-1L
+    toplevel: nox_coremark
+
+  kc705_synth:
+    <<: *default
+    default_tool : vivado
+    parameters:
+      - KC705_KINTEX_7_100MHz
+      - DISPLAY_TEST
+    description : Kintex 7 board synthesis
+    filesets_append:
+      - synth_nox
+      - kc705_constraints
+      - files_tcl
+    tools:
+      vivado:
+        part : xc7k325tffg900-2
+    toplevel: nox_soc

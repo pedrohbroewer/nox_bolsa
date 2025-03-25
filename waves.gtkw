@@ -1,0 +1,291 @@
+[*]
+[*] GTKWave Analyzer v3.3.107 (w)1999-2020 BSI
+[*] Mon Mar 21 09:20:46 2022
+[*]
+[dumpfile] "/Users/aignacio/projects/nox/nox_waves.fst"
+[dumpfile_mtime] "Mon Mar 21 09:15:05 2022"
+[dumpfile_size] 1955549
+[savefile] "/Users/aignacio/projects/nox/waves.gtkw"
+[timestart] 109050
+[size] 2837 1481
+[pos] 282 168
+*-9.794842 110840 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] TOP.
+[treeopen] TOP.nox_sim.
+[treeopen] TOP.nox_sim.u_nox.
+[treeopen] TOP.nox_sim.u_nox.u_decode.u_register_file.
+[treeopen] TOP.nox_sim.u_nox.u_execute.
+[treeopen] TOP.nox_sim.u_nox.u_execute.u_csr.
+[treeopen] TOP.nox_sim.u_nox.u_execute.u_csr.lsu_trap_i.
+[sst_width] 271
+[signals_width] 350
+[sst_expanded] 1
+[sst_vpaned_height] 739
+@28
+TOP.nox_sim.u_nox.arst
+TOP.nox_sim.u_nox.clk
+@800200
+-instr_if
+@100000028
+TOP.nox_sim.u_nox.u_fetch.fetch_st_ff[1:0]
+@28
+[color] 1
+TOP.nox_sim.u_nox.u_fetch.fetch_req_i
+@22
+[color] 1
+TOP.nox_sim.u_nox.u_fetch.fetch_addr_i[31:0]
+@28
+TOP.nox_sim.u_nox.u_fetch.instr_cb_mosi_o.rd_ready
+@22
+TOP.nox_sim.u_nox.start_addr_i[31:0]
+@28
+TOP.nox_sim.u_nox.start_fetch_i
+@22
+[color] 2
+TOP.nox_sim.u_nox.instr_axi_mosi_o.araddr[31:0]
+@28
+[color] 2
+TOP.nox_sim.u_nox.instr_axi_mosi_o.arvalid
+[color] 2
+TOP.nox_sim.masters_axi_miso[0].arready
+[color] 7
+TOP.nox_sim.u_nox.instr_axi_miso_i.rvalid
+[color] 7
+TOP.nox_sim.u_nox.instr_axi_mosi_o.rready
+@22
+TOP.nox_sim.u_nox.instr_axi_miso_i.rdata[31:0]
+@1000200
+-instr_if
+@c00200
+-data_if[LSU]
+@22
+[color] 2
+TOP.nox_sim.masters_axi_mosi[1].awaddr[31:0]
+@28
+[color] 2
+TOP.nox_sim.masters_axi_mosi[1].awvalid
+[color] 2
+TOP.nox_sim.slaves_axi_miso[1].awready
+@22
+[color] 7
+TOP.nox_sim.masters_axi_mosi[1].wdata[31:0]
+@c00028
+[color] 7
+TOP.nox_sim.masters_axi_mosi[1].wstrb[3:0]
+@28
+(0)TOP.nox_sim.masters_axi_mosi[1].wstrb[3:0]
+(1)TOP.nox_sim.masters_axi_mosi[1].wstrb[3:0]
+(2)TOP.nox_sim.masters_axi_mosi[1].wstrb[3:0]
+(3)TOP.nox_sim.masters_axi_mosi[1].wstrb[3:0]
+@1401200
+-group_end
+@28
+[color] 7
+TOP.nox_sim.masters_axi_mosi[1].wvalid
+[color] 7
+TOP.nox_sim.slaves_axi_miso[1].wready
+[color] 3
+TOP.nox_sim.masters_axi_miso[1].bvalid
+[color] 3
+TOP.nox_sim.masters_axi_mosi[1].bready
+@22
+[color] 2
+TOP.nox_sim.masters_axi_mosi[1].araddr[31:0]
+@28
+[color] 2
+TOP.nox_sim.masters_axi_mosi[1].arvalid
+[color] 2
+TOP.nox_sim.masters_axi_miso[1].arready
+[color] 7
+TOP.nox_sim.masters_axi_miso[1].rvalid
+@22
+[color] 7
+TOP.nox_sim.masters_axi_miso[1].rdata[31:0]
+@28
+[color] 7
+TOP.nox_sim.masters_axi_mosi[1].rready
+@1401200
+-data_if[LSU]
+@100000028
+TOP.nox_sim.u_nox.u_execute.id_ex_i.lsu[1:0]
+@28
+TOP.nox_sim.u_nox.u_execute.next_branch.take_branch
+@22
+TOP.nox_sim.u_nox.u_execute.next_branch.b_addr[31:0]
+[color] 7
+TOP.nox_sim.u_nox.u_decode.fetch_instr_i[31:0]
+[color] 7
+TOP.nox_sim.u_nox.u_decode.next_id_ex.pc_dec[31:0]
+@100000028
+[color] 7
+TOP.nox_sim.u_nox.u_decode.instr_dec.op[6:0]
+@800200
+-decode_req_if
+@22
+TOP.nox_sim.u_nox.u_decode.fetch_instr_i[31:0]
+@28
+TOP.nox_sim.u_nox.u_decode.fetch_valid_i
+TOP.nox_sim.u_nox.u_decode.fetch_ready_o
+@1000200
+-decode_req_if
+@800200
+-dec_send_if
+@28
+TOP.nox_sim.u_nox.u_decode.id_valid_o
+TOP.nox_sim.u_nox.u_decode.id_ready_i
+@1000200
+-dec_send_if
+@c00200
+-reg_file
+@22
++{x1_ra} TOP.nox_sim.u_nox.u_decode.u_register_file.reg_file_ff[1][31:0]
+@c00022
++{x2_sp} TOP.nox_sim.u_nox.u_decode.u_register_file.reg_file_ff[2][31:0]
+@28
+(0)TOP.nox_sim.u_nox.u_decode.u_register_file.reg_file_ff[2][31:0]
+(1)TOP.nox_sim.u_nox.u_decode.u_register_file.reg_file_ff[2][31:0]
+(2)TOP.nox_sim.u_nox.u_decode.u_register_file.reg_file_ff[2][31:0]
+(3)TOP.nox_sim.u_nox.u_decode.u_register_file.reg_file_ff[2][31:0]
+(4)TOP.nox_sim.u_nox.u_decode.u_register_file.reg_file_ff[2][31:0]
+(5)TOP.nox_sim.u_nox.u_decode.u_register_file.reg_file_ff[2][31:0]
+(6)TOP.nox_sim.u_nox.u_decode.u_register_file.reg_file_ff[2][31:0]
+(7)TOP.nox_sim.u_nox.u_decode.u_register_file.reg_file_ff[2][31:0]
+(8)TOP.nox_sim.u_nox.u_decode.u_register_file.reg_file_ff[2][31:0]
+(9)TOP.nox_sim.u_nox.u_decode.u_register_file.reg_file_ff[2][31:0]
+(10)TOP.nox_sim.u_nox.u_decode.u_register_file.reg_file_ff[2][31:0]
+(11)TOP.nox_sim.u_nox.u_decode.u_register_file.reg_file_ff[2][31:0]
+(12)TOP.nox_sim.u_nox.u_decode.u_register_file.reg_file_ff[2][31:0]
+(13)TOP.nox_sim.u_nox.u_decode.u_register_file.reg_file_ff[2][31:0]
+(14)TOP.nox_sim.u_nox.u_decode.u_register_file.reg_file_ff[2][31:0]
+(15)TOP.nox_sim.u_nox.u_decode.u_register_file.reg_file_ff[2][31:0]
+(16)TOP.nox_sim.u_nox.u_decode.u_register_file.reg_file_ff[2][31:0]
+(17)TOP.nox_sim.u_nox.u_decode.u_register_file.reg_file_ff[2][31:0]
+(18)TOP.nox_sim.u_nox.u_decode.u_register_file.reg_file_ff[2][31:0]
+(19)TOP.nox_sim.u_nox.u_decode.u_register_file.reg_file_ff[2][31:0]
+(20)TOP.nox_sim.u_nox.u_decode.u_register_file.reg_file_ff[2][31:0]
+(21)TOP.nox_sim.u_nox.u_decode.u_register_file.reg_file_ff[2][31:0]
+(22)TOP.nox_sim.u_nox.u_decode.u_register_file.reg_file_ff[2][31:0]
+(23)TOP.nox_sim.u_nox.u_decode.u_register_file.reg_file_ff[2][31:0]
+(24)TOP.nox_sim.u_nox.u_decode.u_register_file.reg_file_ff[2][31:0]
+(25)TOP.nox_sim.u_nox.u_decode.u_register_file.reg_file_ff[2][31:0]
+(26)TOP.nox_sim.u_nox.u_decode.u_register_file.reg_file_ff[2][31:0]
+(27)TOP.nox_sim.u_nox.u_decode.u_register_file.reg_file_ff[2][31:0]
+(28)TOP.nox_sim.u_nox.u_decode.u_register_file.reg_file_ff[2][31:0]
+(29)TOP.nox_sim.u_nox.u_decode.u_register_file.reg_file_ff[2][31:0]
+(30)TOP.nox_sim.u_nox.u_decode.u_register_file.reg_file_ff[2][31:0]
+(31)TOP.nox_sim.u_nox.u_decode.u_register_file.reg_file_ff[2][31:0]
+@1401200
+-group_end
+@22
++{x3_gp} TOP.nox_sim.u_nox.u_decode.u_register_file.reg_file_ff[3][31:0]
++{x4_tp} TOP.nox_sim.u_nox.u_decode.u_register_file.reg_file_ff[4][31:0]
++{x5_t0} TOP.nox_sim.u_nox.u_decode.u_register_file.reg_file_ff[5][31:0]
++{x6_t1} TOP.nox_sim.u_nox.u_decode.u_register_file.reg_file_ff[6][31:0]
++{x7_t2} TOP.nox_sim.u_nox.u_decode.u_register_file.reg_file_ff[7][31:0]
++{x8_s0} TOP.nox_sim.u_nox.u_decode.u_register_file.reg_file_ff[8][31:0]
++{x9_s1} TOP.nox_sim.u_nox.u_decode.u_register_file.reg_file_ff[9][31:0]
++{x10_a0} TOP.nox_sim.u_nox.u_decode.u_register_file.reg_file_ff[10][31:0]
+@c00022
++{x11_a1} TOP.nox_sim.u_nox.u_decode.u_register_file.reg_file_ff[11][31:0]
+@28
+(0)TOP.nox_sim.u_nox.u_decode.u_register_file.reg_file_ff[11][31:0]
+(1)TOP.nox_sim.u_nox.u_decode.u_register_file.reg_file_ff[11][31:0]
+(2)TOP.nox_sim.u_nox.u_decode.u_register_file.reg_file_ff[11][31:0]
+(3)TOP.nox_sim.u_nox.u_decode.u_register_file.reg_file_ff[11][31:0]
+(4)TOP.nox_sim.u_nox.u_decode.u_register_file.reg_file_ff[11][31:0]
+(5)TOP.nox_sim.u_nox.u_decode.u_register_file.reg_file_ff[11][31:0]
+(6)TOP.nox_sim.u_nox.u_decode.u_register_file.reg_file_ff[11][31:0]
+(7)TOP.nox_sim.u_nox.u_decode.u_register_file.reg_file_ff[11][31:0]
+(8)TOP.nox_sim.u_nox.u_decode.u_register_file.reg_file_ff[11][31:0]
+(9)TOP.nox_sim.u_nox.u_decode.u_register_file.reg_file_ff[11][31:0]
+(10)TOP.nox_sim.u_nox.u_decode.u_register_file.reg_file_ff[11][31:0]
+(11)TOP.nox_sim.u_nox.u_decode.u_register_file.reg_file_ff[11][31:0]
+(12)TOP.nox_sim.u_nox.u_decode.u_register_file.reg_file_ff[11][31:0]
+(13)TOP.nox_sim.u_nox.u_decode.u_register_file.reg_file_ff[11][31:0]
+(14)TOP.nox_sim.u_nox.u_decode.u_register_file.reg_file_ff[11][31:0]
+(15)TOP.nox_sim.u_nox.u_decode.u_register_file.reg_file_ff[11][31:0]
+(16)TOP.nox_sim.u_nox.u_decode.u_register_file.reg_file_ff[11][31:0]
+(17)TOP.nox_sim.u_nox.u_decode.u_register_file.reg_file_ff[11][31:0]
+(18)TOP.nox_sim.u_nox.u_decode.u_register_file.reg_file_ff[11][31:0]
+(19)TOP.nox_sim.u_nox.u_decode.u_register_file.reg_file_ff[11][31:0]
+(20)TOP.nox_sim.u_nox.u_decode.u_register_file.reg_file_ff[11][31:0]
+(21)TOP.nox_sim.u_nox.u_decode.u_register_file.reg_file_ff[11][31:0]
+(22)TOP.nox_sim.u_nox.u_decode.u_register_file.reg_file_ff[11][31:0]
+(23)TOP.nox_sim.u_nox.u_decode.u_register_file.reg_file_ff[11][31:0]
+(24)TOP.nox_sim.u_nox.u_decode.u_register_file.reg_file_ff[11][31:0]
+(25)TOP.nox_sim.u_nox.u_decode.u_register_file.reg_file_ff[11][31:0]
+(26)TOP.nox_sim.u_nox.u_decode.u_register_file.reg_file_ff[11][31:0]
+(27)TOP.nox_sim.u_nox.u_decode.u_register_file.reg_file_ff[11][31:0]
+(28)TOP.nox_sim.u_nox.u_decode.u_register_file.reg_file_ff[11][31:0]
+(29)TOP.nox_sim.u_nox.u_decode.u_register_file.reg_file_ff[11][31:0]
+(30)TOP.nox_sim.u_nox.u_decode.u_register_file.reg_file_ff[11][31:0]
+(31)TOP.nox_sim.u_nox.u_decode.u_register_file.reg_file_ff[11][31:0]
+@1401200
+-group_end
+@22
++{x12_a2} TOP.nox_sim.u_nox.u_decode.u_register_file.reg_file_ff[12][31:0]
++{x13_a3} TOP.nox_sim.u_nox.u_decode.u_register_file.reg_file_ff[13][31:0]
++{x14_a4} TOP.nox_sim.u_nox.u_decode.u_register_file.reg_file_ff[14][31:0]
++{x15_a5} TOP.nox_sim.u_nox.u_decode.u_register_file.reg_file_ff[15][31:0]
++{x16_a6} TOP.nox_sim.u_nox.u_decode.u_register_file.reg_file_ff[16][31:0]
++{x17_a7} TOP.nox_sim.u_nox.u_decode.u_register_file.reg_file_ff[17][31:0]
++{x18_s2} TOP.nox_sim.u_nox.u_decode.u_register_file.reg_file_ff[18][31:0]
++{x19_s3} TOP.nox_sim.u_nox.u_decode.u_register_file.reg_file_ff[19][31:0]
++{x20_s4} TOP.nox_sim.u_nox.u_decode.u_register_file.reg_file_ff[20][31:0]
++{x21_s5} TOP.nox_sim.u_nox.u_decode.u_register_file.reg_file_ff[21][31:0]
++{x22_s6} TOP.nox_sim.u_nox.u_decode.u_register_file.reg_file_ff[22][31:0]
++{x23_s7} TOP.nox_sim.u_nox.u_decode.u_register_file.reg_file_ff[23][31:0]
++{x24_s8} TOP.nox_sim.u_nox.u_decode.u_register_file.reg_file_ff[24][31:0]
++{x25_s9} TOP.nox_sim.u_nox.u_decode.u_register_file.reg_file_ff[25][31:0]
++{x26_s10} TOP.nox_sim.u_nox.u_decode.u_register_file.reg_file_ff[26][31:0]
+@800022
++{x27_s11} TOP.nox_sim.u_nox.u_decode.u_register_file.reg_file_ff[27][31:0]
+@1001200
+-group_end
+@22
++{x28_t3} TOP.nox_sim.u_nox.u_decode.u_register_file.reg_file_ff[28][31:0]
++{x29_t4} TOP.nox_sim.u_nox.u_decode.u_register_file.reg_file_ff[29][31:0]
++{x30_t5} TOP.nox_sim.u_nox.u_decode.u_register_file.reg_file_ff[30][31:0]
++{x31_t6} TOP.nox_sim.u_nox.u_decode.u_register_file.reg_file_ff[31][31:0]
+@1401200
+-reg_file
+@800200
+-trap
+@28
+[color] 2
+TOP.nox_sim.u_nox.u_execute.trap_out.active
+TOP.nox_sim.u_nox.u_execute.u_csr.dbg_irq_mtime
+TOP.nox_sim.u_nox.u_execute.u_csr.dbg_irq_mext
+TOP.nox_sim.u_nox.u_execute.u_csr.dbg_irq_msoft
+TOP.nox_sim.u_nox.u_execute.id_ex_i.ecall
+TOP.nox_sim.u_nox.u_execute.id_ex_i.ebreak
+TOP.nox_sim.u_nox.u_execute.id_ex_i.wfi
++{dec_trap} TOP.nox_sim.u_nox.u_execute.u_csr.dec_trap_i.active
++{fetch_trap} TOP.nox_sim.u_nox.u_execute.fetch_trap_i.active
++{ld_error_trap} TOP.nox_sim.u_nox.u_execute.u_csr.lsu_trap_i.ld.active
++{ld_mis_trap} TOP.nox_sim.u_nox.u_execute.u_csr.lsu_trap_i.ld_mis.active
++{st_error_trap} TOP.nox_sim.u_nox.u_execute.u_csr.lsu_trap_i.st.active
++{st_mis_trap} TOP.nox_sim.u_nox.u_execute.u_csr.lsu_trap_i.st_mis.active
++{b_or_j_misaligned} TOP.nox_sim.u_nox.u_execute.instr_addr_misaligned.active
+@22
+TOP.nox_sim.u_nox.u_execute.trap_out.pc_addr[31:0]
+TOP.nox_sim.u_nox.u_execute.u_csr.csr_mcause_ff[31:0]
+TOP.nox_sim.u_nox.u_execute.u_csr.csr_mepc_ff[31:0]
+TOP.nox_sim.u_nox.u_execute.u_csr.csr_mie_ff[31:0]
+TOP.nox_sim.u_nox.u_execute.u_csr.csr_mip_ff[31:0]
+TOP.nox_sim.u_nox.u_execute.u_csr.csr_mscratch_ff[31:0]
+TOP.nox_sim.u_nox.u_execute.u_csr.csr_mstatus_ff[31:0]
+TOP.nox_sim.u_nox.u_execute.u_csr.csr_mtvec_ff[31:0]
+TOP.nox_sim.u_nox.u_execute.u_csr.csr_mtval_ff[31:0]
+@28
+TOP.nox_sim.u_nox.u_execute.id_ex_i.mret
+@1000200
+-trap
+@28
+TOP.nox_sim.u_nox.u_lsu.bp_addr
+TOP.nox_sim.u_nox.u_lsu.bp_data
+TOP.nox_sim.u_nox.u_lsu.lsu_bp_o
+@8022
+TOP.nox_sim.u_dram.csr_o[7:0]
+[pattern_trace] 1
+[pattern_trace] 0
