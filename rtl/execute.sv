@@ -11,7 +11,8 @@ module execute
   import nox_utils_pkg::*;
 #(
   parameter int SUPPORT_DEBUG     = 1,
-  parameter int MTVEC_DEFAULT_VAL = 'h1000 // 4KB
+  parameter int MTVEC_DEFAULT_VAL = 'h1000, // 4KB
+  parameter int unsigned M_HART_ID = `M_HART_ID
 )(
   input                     clk,
   input                     rst,
@@ -229,7 +230,8 @@ module execute
 
   csr #(
     .SUPPORT_DEBUG      (SUPPORT_DEBUG),
-    .MTVEC_DEFAULT_VAL  (MTVEC_DEFAULT_VAL)
+    .MTVEC_DEFAULT_VAL  (MTVEC_DEFAULT_VAL),
+    .M_HART_ID          (M_HART_ID)
   ) u_csr (
     .clk                (clk),
     .rst                (rst),
