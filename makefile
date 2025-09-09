@@ -110,13 +110,13 @@ MACROS_VLOG		?=	$(addprefix +define+,$(_MACROS_VLOG))
 # the executable nox_sim
 RUN_CMD				:=	docker run --rm --name ship_nox	\
 									-v $(abspath .):/nox_files -w		\
-									/nox_files aignacio/nox
+									/nox_files docker.io/library/nox
 RUN_CMD_2			:=	docker run --rm --name ship_nox	\
 									-v $(abspath .):/nox_files -w		\
-									/opt/riscv-arch-test-nox aignacio/nox
+									/opt/riscv-arch-test-nox docker.io/library/nox
 RUN_CMD_COMP	:=	docker run --rm --name ship_nox	\
 									-v $(abspath .):/test -w				\
-									/test/riscof_compliance aignacio/riscof
+									/test/riscof_compliance docker.io/library/nox
 
 RUN_SW				:=	sw/hello_world/output/hello_world.elf
 #RUN_SW_SOC		:=	sw/bootloader/output/bootloader.elf
@@ -202,7 +202,7 @@ all: clean $(VERILATOR_EXE)
 	@echo "\n"
 
 build_nox_docker:
-	docker build -f Dockerfile.nox -t aignacio/nox:latest . --progress tty
+	docker build -f Dockerfile.nox -t docker.io/library/nox . --progress tty
 
 $(RUN_SW):
 	make -C sw/hello_world all

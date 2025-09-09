@@ -22,11 +22,11 @@ OUTFLAG= -o
 
 RUN_CMD	?=	docker run --rm --name ship_nox	  \
 		    -v $(abspath .):/nox_files -w     \
-		    /nox_files aignacio/nox riscv-none-embed-
+		    /nox_files docker.io/library/nox riscv-none-embed-
 
 RUN_PY	?=	docker run --rm --name ship_nox	  \
 		    -v $(abspath .):/nox_files -w     \
-		    /nox_files aignacio/nox python3
+		    /nox_files docker.io/library/nox python3
 
 # Flag : CC
 #	Use this flag to define compiler to use

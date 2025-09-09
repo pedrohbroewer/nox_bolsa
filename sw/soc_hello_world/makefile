@@ -2,11 +2,11 @@
 PREFIX	?=	docker run --rm --name sw_nox					\
 						-v $(abspath ../..):/nox_files -w			\
 						/nox_files/sw/$(notdir $(shell pwd))	\
-						aignacio/nox riscv-none-embed-
+						docker.io/latest/nox riscv-none-embed-
 RUN_PY	?=	docker run --rm --name sw_nox					\
 						-v $(abspath ../..):/nox_files -w			\
 						/nox_files/sw/$(notdir $(shell pwd))	\
-						aignacio/nox python3
+						docker.io/latest/nox python3
 UART_MODE ?= REAL_UART
 CC			:=	$(PREFIX)gcc
 OBJDUMP	:=	$(PREFIX)objdump
