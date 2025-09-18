@@ -47,6 +47,7 @@ void print_logo(void){
   printf("\n\r mcause  \t0x%x",mcause_csr);
   printf("\n\r cycle   \t%d",cycle);
   printf("\n\r");
+  printf("Não acredito que funcinou mesmo \n\r");
 }
 
 int main(void) {
